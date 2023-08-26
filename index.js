@@ -32,9 +32,10 @@ function init(){
 }
 
 function viewAllEmployee(){
-    db.query("select * from employee",(err,data)=>{
+    db.query("select * from employees",(err,data)=>{
         if(err) console.log(err)
         console.table(data)
+        init()
     })
 }
 
@@ -42,6 +43,7 @@ function viewAllDepartment(){
     db.query("select * from department",(err,data)=>{
         if(err) console.log(err)
         console.table(data)
+        init()
     })
 }
 
